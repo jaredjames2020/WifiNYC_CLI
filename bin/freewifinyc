@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib/FreeWiFiNYC'
+require_relative '../lib/FreeWiFiNYC/freeWiFiNYC'
 
-FreeWiFiNYC::CLI.new.call
+FreeWiFiNYC.new
