@@ -23,16 +23,15 @@ class Cli
       if @find_wifi_input == "HELP"
         borough_selector
       # elsif @zip_codes.include?(@find_wifi_input)
-      # elsif Scraper.zips.include?(@find_wifi_input)
-    elsif Scraper.zipcode_hardcode.include?(@find_wifi_input)
-        Api.zip_code
+      elsif Scraper.zips.include?(@find_wifi_input)
+          Api.zip_code
       elsif @find_wifi_input == "EXIT"
         return goodbye
       elsif @find_wifi_input.length != 5
         puts "Invalid entry. Please enter a 5 digit NYC zip code."
         find_wifi
       else
-        Scraper.zips.include?(@find_wifi_input) ?
+        Scraper.zipcode_hardcode.include?(@find_wifi_input.to_i) ?
         (puts "Sorry there is no free wifi in this area of NYC.\nType 'help' to search by neighborhood.")
         : (puts "Invalid entry. Type 'help' to search by neighborhood.")
         find_wifi
