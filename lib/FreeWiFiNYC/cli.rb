@@ -23,7 +23,8 @@ class Cli
       if @find_wifi_input == "HELP"
         borough_selector
       # elsif @zip_codes.include?(@find_wifi_input)
-      elsif Scraper.zips.include?(@find_wifi_input)
+      # elsif Scraper.zips.include?(@find_wifi_input)
+    elsif Scraper.zipcode_hardcode.include?(@find_wifi_input)
         Api.zip_code
       elsif @find_wifi_input == "EXIT"
         return goodbye
