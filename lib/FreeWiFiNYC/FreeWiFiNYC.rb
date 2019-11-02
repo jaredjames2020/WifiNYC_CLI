@@ -7,11 +7,11 @@ require 'nokogiri'
 require 'json'
 require 'pry'
 
-class FreeWiFiNYC
+class WifiNYC
 
   def initialize #self.program_exec
     Cli.call
   end
 end
 
-FreeWiFiNYC.new#program_exec
+WiFiNYC.new#program_exec
