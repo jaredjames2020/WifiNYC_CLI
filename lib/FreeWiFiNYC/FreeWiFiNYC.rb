@@ -14,4 +14,4 @@ class WifiNYC
   end
 end
 
-WifiNYC.new#program_exec
+#WifiNYC.new#program_exec
