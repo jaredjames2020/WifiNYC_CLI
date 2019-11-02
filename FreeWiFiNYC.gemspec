@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib", "FreeWiFiNYC/cli", "FreeWiFiNYC/scraper", "FreeWiFiNYC/FreeWiFiNYC", "FreeWiFiNYC/api"]
+  spec.require_paths = ["lib", "lib/FreeWiFiNYC/cli", "lib/FreeWiFiNYC/scraper", "lib/FreeWiFiNYC/FreeWiFiNYC", "lib/FreeWiFiNYC/api"]
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
