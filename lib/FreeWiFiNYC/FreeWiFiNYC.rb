@@ -9,9 +9,9 @@ require 'pry'
 
 class WifiNYC
 
-  def initialize #self.program_exec
+  def call #self.program_exec
     Cli.call
   end
 end
 
-#WifiNYC.new#program_exec
+# WifiNYC.new.call#program_exec

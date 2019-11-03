@@ -2,4 +2,4 @@
 
 require_relative '../lib/FreeWiFiNYC/freeWiFiNYC'
 
-WifiNYC.new
+WifiNYC.new.call
