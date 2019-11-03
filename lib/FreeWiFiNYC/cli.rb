@@ -1,7 +1,5 @@
 class Cli
 
-  puts "Cli Class"
-
     def self.call
       Scraper.scrape_data
       welcome
@@ -9,7 +7,15 @@ class Cli
     end
 
     def self.welcome
-      puts "\nHello, I can help you find free Wi-Fi. You can search by zip code or neighborhood.\n"
+      puts ""
+      puts "-----------------------------------------"
+      puts ""
+      puts "              FREE WIFI NYC"
+      puts ""
+      puts "-----------------------------------------"
+
+      puts "\nHello, I can help you find free Wi-Fi in New York City."
+      puts "You can search by zip code or neighborhood."
     end
 
     def self.goodbye
@@ -17,12 +23,11 @@ class Cli
     end
 
     def self.find_wifi
-      puts "Please enter a zip code or type 'help' to search by neighborhood or type 'exit':"
+      puts "\nPlease enter a zip code or type 'help' to search by neighborhood or type 'exit':"
       @find_wifi_input = gets.chomp.upcase
 
       if @find_wifi_input == "HELP"
         borough_selector
-      # elsif @zip_codes.include?(@find_wifi_input)
       elsif Scraper.zips.include?(@find_wifi_input)
           Api.zip_code
       elsif @find_wifi_input == "EXIT"
@@ -31,7 +36,7 @@ class Cli
         puts "Invalid entry. Please enter a 5 digit NYC zip code."
         find_wifi
       else
-        Scraper.zipcode_hardcode.include?(@find_wifi_input.to_i) ?
+        Scraper.zips.include?(@find_wifi_input) || Scraper.backup_nyc_zips.include?(@find_wifi_input.to_i) ?
         (puts "Sorry there is no free wifi in this area of NYC.\nType 'help' to search by neighborhood.")
         : (puts "Invalid entry. Type 'help' to search by neighborhood.")
         find_wifi
@@ -81,8 +86,8 @@ class Cli
     end
 
     def self.borough_assigner
-      borough = gets.chomp.upcase
-      case borough
+      @borough = gets.chomp.upcase
+      case @borough
         when "1"
           puts "Bronx"
           @borough = "Bronx"

@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    FreeWiFiNYC (0.1.11)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  FreeWiFiNYC!
+  bundler (~> 2.0.2)
+  rake (~> 10.0)
+
+BUNDLED WITH
+   2.0.2
