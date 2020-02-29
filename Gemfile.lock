@@ -2,19 +2,31 @@ PATH
   remote: .
   specs:
     FreeWiFiNYC (0.1.11)
+      json
+      nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
-    rake (10.4.2)
+    coderay (1.1.2)
+    json (2.3.0)
+    method_source (0.9.2)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    rake (13.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   FreeWiFiNYC!
-  bundler (~> 2.0.2)
-  rake (~> 10.0)
+  bundler (~> 1.16)
+  pry
+  rake (~> 13.0)
 
 BUNDLED WITH
    2.0.2
